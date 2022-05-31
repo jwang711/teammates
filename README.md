@@ -1,41 +1,122 @@
-# TEAMMATES Developer Web Site
+<h1 align="center">
+  <br>
+  <a href="https://github.com/salomonelli/best-resume-ever">
+  <img src="src/web/assets/images/overview.png" width="1000"></a>
+  <br>
+  TEAMMATES Developer Web Site
+  <br>
+</h1>
+
+<div align="center">
 
 [![GitHub Actions Build Status Component Tests](https://github.com/TEAMMATES/teammates/workflows/Component%20Tests/badge.svg)](https://github.com/TEAMMATES/teammates/actions)
 [![GitHub Actions Build Status E2E Tests](https://github.com/TEAMMATES/teammates/workflows/E2E%20Tests/badge.svg)](https://github.com/TEAMMATES/teammates/actions)
 [![Codecov Coverage Status](https://codecov.io/gh/TEAMMATES/teammates/branch/master/graph/badge.svg)](https://codecov.io/gh/TEAMMATES/teammates)
 [![License](https://img.shields.io/badge/license-GPLv2-blue.svg)](LICENSE)
+</div>
+<div align="center">About</div>
+TEAMMATES is a free online tool for managing peer evaluations and other feedback paths of your students. It is provided as a cloud-based service for educators/students and is currently used by hundreds of universities across the world.
+<br>
 
-TEAMMATES is a free online tool for managing peer evaluations and other feedback paths of your students.
-It is provided as a cloud-based service for educators/students and is currently used by hundreds of universities across the world.
+## Table of Contents
 
-<img src="src/web/assets/images/overview.png" width="600">
+- [Product overview](#Product-overview)
+- [Quickstart](#Quickstart)
+- [Documentation for developers](#Documentation-for-developers)
+- [Contributing to TEAMMATES](#Contributing-to-TEAMMATES)
+- [Acknowledgements](#Acknowledgements)
+- [Contacting us](#Contacting-us)
 
-This is the developer web site for TEAMMATES. **Click [here](http://teammatesv4.appspot.com/) to go to the TEAMMATES product website.**
 
-[**Documentation for Developers** :book:](https://teammates.github.io/teammates) |
-[Version History](https://github.com/TEAMMATES/teammates/milestones?direction=desc&sort=due_date&state=closed) |
-[Project Stats](https://www.openhub.net/p/teammatesonline)
+## Product overview
 
-## Interested to join TEAMMATES developer team?
+Product website: [TEAMMATES.com](https://teammates.github.io/teammates/)
 
-We welcome contributions from developers, especially students. Here are some resources:
-* [**Contributor Orientation Guide**](https://teammates.github.io/teammates/contributing-doc.html): This document describes what you need to know/do to become a contributor.
-* [**Project ideas page**](https://github.com/TEAMMATES/teammates/wiki): These are for those who would like to do a relatively bigger projects with TEAMMATES (e.g. summer internships).
+Features: [Product key features](https://teammates.github.io/teammates/)
 
-## Acknowledgements
+- View, edit, and search student records
+- Add, create, and enroll students/instructors 
+- View, change, and delete students/instructors
+- Manage and archive courses.
+- And more [features](https://teammates.github.io/teammates/)
 
-TEAMMATES team wishes to thank the following invaluable contributions:
-* [**School of Computing, National University of Singapore (NUS)**](http://www.comp.nus.edu.sg), for providing us with the infrastructure support to run the project.
-* [**Centre for Development of Teaching and Learning (CDTL)**](https://nus.edu.sg/cdtl) of NUS, for supporting us with several *Teaching Enhancement Grants* over the years.
-* **Learning Innovation Fund-Technology (LIF-T)** initiative of NUS, for funding us for the 2015-2018 period.
-* **Google Summer of Code** Program, for including TEAMMATES as a mentor organization in *GSoC2014*, *GSoC2015*, *GSoC2016*, *GSoC2017* and *GSoC2018* editions.
-* **Facebook Open Academy** Program, for including TEAMMATES as a mentor organization in FBOA 2016.
-* **Jet Brains**, for the [Intellij IDEA](https://www.jetbrains.com/idea/) licences
-* <img src="src/web/assets/images/yklogo.png" width="100"> [**YourKit LLC**](https://www.yourkit.com), for providing us with free licenses for the [YourKit Java Profiler](https://www.yourkit.com/java/profiler) (an industry leading profiler tool for Java applications).
-* <img src="src/web/assets/images/saucelabs.png" width="100"> [**SauceLabs**](https://saucelabs.com), for providing us with a free [Open Sauce account](https://saucelabs.com/open-source) for cross-browser testing.
+<img src="src/web/assets/images/feature1.png" width="1000">
 
-## Contacting us
+<img src="src/web/assets/images/feature2.png" width="1000">
 
-The best way to contact us is to [post a message in our issue tracker](https://github.com/TEAMMATES/teammates/issues/new). Our issue tracker doubles as a discussion forum. You can use it for things like asking questions about the project or requesting technical help.
+<img src="src/web/assets/images/feature3.png" width="1000">
 
-Alternatively (less preferred), you can email us at **teammates@comp.nus.edu.sg**.
+## Quickstart
+
+Run the project locally to view features. This project uses MarkBind for developer documentation. MarkBind is used to create a static site, and can parse markdown, GitHub Flavoured Markdown, and more.
+
+All the commands in this document are assumed to be run from the /docs folder, unless specified otherwise.
+
+**Installation**
+
+1. Install Node.js (minimum version 12).
+2. Run npm ci to install the necessary tools to build documentation.
+
+Install the following additional dependencies required by MarkBind to generate PlantUML diagrams locally:
+
+1. Install Java 8 or later.
+2. Install Graphviz v2.38 (or later).
+
+> You can also use a globally installed MarkBind if you have one. Make sure to use version 3.*.*.
+
+**Run**
+
+Run the following command to view the site locally:
+```bash
+npm run serve
+
+#Alternative if you wish to use a globally installed MarkBind
+markbind serve
+```
+
+The live preview will be available at localhost:8080 by default and should update automatically to reflect changes you make to the docs. If you wish to use another port (e.g. 8090), use the -p flag as follows:
+
+```bash
+npm run serve -- -p 8090
+markbind serve -p 8090
+```
+Click [here](https://teammates.github.io/teammates/documentation.html) to view more about how to run the project locally.
+
+## Development environment and guidelines
+
+Click [here](https://teammates.github.io/teammates/) to view the FULL documentation for developers in details.
+
+1. [Development environment setup](https://teammates.github.io/teammates/setting-up.html) 
+2. [Development Guideline](https://teammates.github.io/teammates/development.html)
+
+## Documentation for developers
+
+1. [Development Workflow](https://teammates.github.io/teammates/process.html)
+2. [Troubleshoot Guide](https://teammates.github.io/teammates/troubleshooting-guide.html)
+3. [Software Design](https://teammates.github.io/teammates/design.html) - Architecture, APIs, etc
+4. [TEAMMATES Glossary](https://teammates.github.io/teammates/design.html) 
+
+
+## Make a contribution
+
+We welcome contributions from developers, especially students. 
+
+> #### [Please follow these steps to contribute](https://teammates.github.io/teammates/contributing-doc.html).
+
+### Acknowledgements
+
+> #### [TEAMMATES team wishes to thank the following invaluable contributions](https://teammatesv4.appspot.com/web/front/about).
+
+
+## Get help
+
+1. [Report issues](https://github.com/TEAMMATES/teammates/issues/new)
+
+    The best way to contact us is to [post a message in our issue tracker](https://github.com/TEAMMATES/teammates/issues/new). Our issue tracker doubles as a discussion forum. You can use it for things like asking questions about the project or requesting technical help.
+
+    Alternatively (less preferred), you can email us at teammates@comp.nus.edu.sg.
+
+    Blog: visit the [TEAMMATES Blog](http://teammatesonline.blogspot.com/) to see our latest updates and information.
+
+2. [Help for students](https://teammatesv4.appspot.com/web/front/help/student)
+3. [Help for instructors](https://teammatesv4.appspot.com/web/front/help/instructor)
